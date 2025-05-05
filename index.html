@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Record Keeper</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+  <form id="bookForm">
+    <input type="text" id="title" placeholder="Book Title" required />
+    <input type="text" id="author" placeholder="Author" required />
+    <button type="submit">Add Book</button>
+  </form>
+
+  <input type="text" id="searchInput" placeholder="Search by title or author..." />
+
+  <div class="controls">
+    <label for="sortField">Sort by:</label>
+    <select id="sortField">
+      <option value="title">Title</option>
+      <option value="author">Author</option>
+    </select>
+
+    <select id="sortOrder">
+      <option value="asc">A–Z</option>
+      <option value="desc">Z–A</option>
+    </select>
+
+    <button id="exportJson">Export JSON</button>
+    <button id="exportCsv">Export CSV</button>
+
+    <input type="file" id="importFile" accept=".json,.csv" />
+  </div>
+
+  <ul id="bookList"></ul>
+
+  <script src="./script.js"></script>
+</body>
+</html>
