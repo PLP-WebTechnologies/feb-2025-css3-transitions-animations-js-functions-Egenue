@@ -121,7 +121,7 @@ exportJson.addEventListener('click', () => {
 });
 
 exportCsv.addEventListener('click', () => {
-  const csv = "Title,Author\n" + books.map(b => \`\${b.title},\${b.author}\`).join("\n");
+  const csv = "Title,Author\n" + books.map(b => `${b.title}, ${b.author}`).join("\n");
   const blob = new Blob([csv], { type: 'text/csv' });
   const url = URL.createObjectURL(blob);
   downloadFile(url, 'books.csv');
